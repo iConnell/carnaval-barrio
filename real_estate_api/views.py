@@ -4,7 +4,6 @@ from .models import Property, Review
 from rest_framework.response import Response
 from rest_framework import status, permissions
 from .serializers import PropertySerializer, ReviewSerializer
-from rest_framework.permissions import IsAuthenticated
 
 # Create your views here.
 
@@ -15,7 +14,7 @@ class PropertyViews(ModelViewSet):
     def get_permissions(self):
         permission_classes = []
         if self.request.method != 'GET':
-            permission_classes = [IsAuthenticated]
+            permission_classes = [permissions.IsAdminUser]
 
         return [permission() for permission in permission_classes]
     
