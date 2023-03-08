@@ -32,6 +32,7 @@ class PropertyViews(ModelViewSet):
 
 class ReviewViews(ModelViewSet):
     serializer_class = ReviewSerializer
+    permission_classes = [permissions.IsAuthenticated]
 
     def get_queryset(self):
         property_id = self.kwargs['property_id']
