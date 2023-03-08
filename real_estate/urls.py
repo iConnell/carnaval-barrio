@@ -22,6 +22,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('properties/', include('real_estate_api.urls')),
     path('auth/', include('dj_rest_auth.urls')),
+    path('register/', include('dj_rest_auth.registration.urls')),
 ]
 
 if settings.DEBUG:

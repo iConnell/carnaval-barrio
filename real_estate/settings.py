@@ -41,6 +41,8 @@ INSTALLED_APPS = [
 
     'rest_framework',
     'rest_framework.authtoken',
+    'allauth',
+    'allauth.account',
     'dj_rest_auth',
     'dj_rest_auth.registration',
 
@@ -117,6 +119,8 @@ REST_FRAMEWORK = {
     'PAGE_SIZE': 10,
 }
 
+# Allauth settings
+ACCOUNT_EMAIL_VERIFICATION = 'none'
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.1/topics/i18n/
